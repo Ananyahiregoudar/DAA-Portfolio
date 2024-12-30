@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>iDESIGN - Interior Design HTML Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teammates</title>
+    <style>
+        /* CSS Animation and Styles for Team Member Icons */
+        .fade-in {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .team-item {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .team-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-img img {
+            transition: transform 0.3s ease;
+        }
+
+        .team-item:hover .team-img img {
+            transform: scale(1.1);
+        }
+
+        .team-social .btn:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .team-social {
+            position: absolute;
+            bottom: -50px; /* Initially hidden below the image */
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0; /* Initially invisible */
+            transition: bottom 0.3s ease, opacity 0.3s ease;
+        }
+
+        .team-item:hover .team-social {
+            bottom: 10px; /* Position above the image on hover */
+            opacity: 1; /* Make icons visible */
+        }
+
+        .team-social .btn {
+            margin: 0 5px;
+            font-size: 1.2rem;
+        }
+
+        .team-social .btn:hover {
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Flaticon Font -->
+    <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f5f5dc; /* Light beige color */
+        }
+    </style>
+    
+</head>
+
+<body>
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative nav-bar p-0">
+        <div class="container position-relative" style="z-index: 9;">
+            <nav class="navbar navbar-expand-lg bg-secondary navbar-dark py-3 py-lg-0 pl-3 pl-lg-5">
+                <a href="" class="navbar-brand">
+                    <img src="OIP.jpeg" alt="iDESIGN Logo" class="logo" style="height: 50px;">
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto py-0">
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About Course</a>
+                        <a href="service.html" class="nav-item nav-link">Course Reflection</a>
+                        <a href="project.html" class="nav-item nav-link">Course Project</a>
+                        <a href="about_us.html" class="nav-item nav-link">About Us</a>
+                       
+                        
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    
+
+    <!-- Page Header Start -->
+    <div class="container-fluid bg-secondary py-5">
+        <div class="container py-5">
+            <div class="row align-items-center py-4">
+                <div class="col-md-6 text-center text-md-left">
+                    <h1 class="mb-4 mb-md-0 text-primary text-uppercase">About Us</h1>
+                </div>
+                <div class="col-md-6 text-center text-md-right">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="btn btn-outline-primary" href="http://127.0.0.1:5500/interior-design-html-template/index.html">Home</a>
+                        <i class="fas fa-angle-double-right text-primary mx-2"></i>
+                        <a class="btn btn-outline-primary disabled" href="">About Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header Start -->
+
+    <!-- Applications of DAA Start -->
+<div class="container-fluid" style="background-color:#f5f5dc;">
+    <div class="container">
+        <div class="row">
+            <!-- Left Column (Image Section) -->
+            <div class="col-md-4 col-sm-6">
+                <div class="py-5 px-4 h-100 bg-primary d-flex flex-column align-items-center justify-content-center">
+                    <img class="img-fluid mx-auto d-block" src="ananya.jpg" alt="" style="height: 100%; width: 100%; object-fit: cover;"> <!-- Set the image to cover and height 100% -->
+                </div>
+            </div>
+            <!-- Right Column (About Me Section) -->
+            <div class="col-md-8 col-sm-6 p-4">
+                <div class="d-flex flex-column bg-secondary text-white p-4 rounded" style="height: 100%;"> <!-- Set the height to 100% -->
+                    <h2 class="text-uppercase mb-4" style="color: white;">About Me</h2>
+                    <p class="h4" style="color: white;"><strong>NAME-</strong> Ananya Hiregoudar</p><br>
+                    <p class="h4" style="color: white;"><strong>USN-</strong> 01fe23BCS104</p><br>
+                    <p class="h4" style="color: white;"><strong>ROLL NO-</strong> 443</p><br>
+                    <p class="h4" style="color: white;"><strong>DIVISION-</strong> D</p><br>
+                    <p class="h4" style="color: white;"><strong>COURSE NAME-</strong> Design and Analysis of Algorithms</p><br>
+                    <p class="h4" style="color: white;"><strong>COURSE CODE-</strong> 24ECSC205</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Applications of DAA End -->
+
+
+    <!-- Team Start -->
+    <div class="container-fluid py-6 px-5">
+        <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+            <h1 class="display-5 mb-0">GUIDES</h1>
+            <hr class="w-25 mx-auto bg-primary">
+        </div>
+        <div class="row g-5">
+            <div class="col-lg-4">
+                <div class="team-item position-relative overflow-hidden">
+                    <img class="img-fluid w-100" src="hod.jpg" alt="">
+                   
+                        <h3>Vijayalakshmi M </h3>
+                        <p>HOD SOCSE</p>
+                  
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="team-item position-relative overflow-hidden">
+                    <img class="img-fluid w-100" src="ph.jpg" alt="">
+                    
+                        <h3>Prakash Hegade</h3>
+                        <p>Course Co-ordinator</p>
+                   
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="team-item position-relative overflow-hidden">
+                    <img class="img-fluid w-100" src="maam.jpg" alt="">
+                    
+                        <h3>Arundati A</h3>
+                        <p >Course Instructor</p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+
+<!-- Team Start -->
+<div class="container-fluid py-5" style="background-color: #f5f5dc;"> <!-- Light Beige Background -->
+    <div class="container pt-5 pb-3">
+        <div class="text-center mb-3 pb-3">
+            <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Clique</h6>
+            <h1 class="fade-in">Teammates</h1>
+        </div>
+        <div class="row">
+            <!-- Team Member Card 1 -->
+            <div class="col-lg-3 col-md-4 col-sm-6 pb-2">
+                <div class="team-item bg-white mb-4 shadow-lg hover-shadow">
+                    <div class="team-img position-relative overflow-hidden">
+                        <img class="img-fluid w-100" src="Ananya.jpg" alt="">
+                        <div class="team-social">
+                            <a class="btn btn-outline-primary btn-square" href="https://x.com/AnanyaHire94201"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-primary btn-square" href="https://linkedin.com/in/Ananya Hiregoudar"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-primary btn-square" href="https://www.instagram.com/ananya_vh_/"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-primary btn-square" href="https://github.com/Ananya Hiregoudar"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="text-center py-4">
+                        <h5 class="text-truncate">Ananya V Hiregoudar</h5>
+                        <p class="m-0" style="color: #555; font-size: 0.9rem;">Student</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Team Member Card 2 -->
+            <div class="col-lg-3 col-md-4 col-sm-6 pb-2">
+                <div class="team-item bg-white mb-4 shadow-lg hover-shadow">
+                    <div class="team-img position-relative overflow-hidden">
+                        <img class="img-fluid w-100" src="kavya.jpg" alt="">
+                        <div class="team-social">
+                            <a class="btn btn-outline-primary btn-square" href="https://x.com/UppinKavya"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-primary btn-square" href="https://linkedin.com/in/Kavya Uppin"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-primary btn-square" href="https://instagram.com/kavyauppin7"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-primary btn-square" href="https://github.com/kavyauppin7"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="text-center py-4">
+                        <h5 class="text-truncate">Kavya V Uppin</h5>
+                        <p class="m-0" style="color: #555; font-size: 0.9rem;">Student</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Team Member Card 3 -->
+            <div class="col-lg-3 col-md-4 col-sm-6 pb-2">
+                <div class="team-item bg-white mb-4 shadow-lg hover-shadow">
+                    <div class="team-img position-relative overflow-hidden">
+                        <img class="img-fluid w-100" src="Anusha.jpg" alt="">
+                        <div class="team-social">
+                            <a class="btn btn-outline-primary btn-square" href="https://x.com/AnushaS7605"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-primary btn-square" href="https://linkedin.com/in/Anusha Shigihalli"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-primary btn-square" href="https://instagram.com/anusha_shigihalli/"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-primary btn-square" href="https://github.com/anushashigihalli"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="text-center py-4">
+                        <h5 class="text-truncate">Anusha U Shigihalli</h5>
+                        <p class="m-0" style="color: #555; font-size: 0.9rem;">Student</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Team Member Card 4 -->
+            <div class="col-lg-3 col-md-4 col-sm-6 pb-2">
+                <div class="team-item bg-white mb-4 shadow-lg hover-shadow">
+                    <div class="team-img position-relative overflow-hidden">
+                        <img class="img-fluid w-100" src="Rithika.jpg" alt="">
+                        <div class="team-social">
+                            <a class="btn btn-outline-primary btn-square" href="https://x.com/AnushaS7605"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-primary btn-square" href="https://linkedin.com/in/Anusha Shigihalli"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-primary btn-square" href="https://instagram.com/anusha_shigihalli/"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-primary btn-square" href="https://github.com/anushashigihalli"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="text-center py-4">
+                        <h5 class="text-truncate">Rithika Patil</h5>
+                        <p class="m-0" style="color: #555; font-size: 0.9rem;">Student</p>
+                    </div>
+                </div>
+            </div>
+                            

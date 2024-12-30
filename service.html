@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>iDESIGN - Interior Design HTML Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+    <style>
+        <style>
+    .note-images {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .note-img {
+        width: 150px;
+        height: auto;
+        cursor: pointer;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        transition: transform 0.2s;
+    }
+
+    .note-img:hover {
+        transform: scale(1.05);
+    }
+
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 999;
+        padding: 60px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+    }
+
+    .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #fff;
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+
+<script>
+    function expandImage(img) {
+        var modal = document.getElementById("modal");
+        var expandedImg = document.getElementById("expandedImg");
+        modal.style.display = "block";
+        expandedImg.src = img.src;
+    }
+
+    function closeModal() {
+        document.getElementById("modal").style.display = "none";
+    }
+</script>
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Flaticon Font -->
+    <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative nav-bar p-0">
+        <div class="container position-relative" style="z-index: 9;">
+            <nav class="navbar navbar-expand-lg bg-secondary navbar-dark py-3 py-lg-0 pl-3 pl-lg-5">
+                <a href="" class="navbar-brand">
+                    <img src="OIP.jpeg" alt="iDESIGN Logo" class="logo" style="height: 50px;">
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto py-0">
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About Course</a>
+                        <a href="service.html" class="nav-item nav-link">Course Reflection</a>
+                        <a href="project.html" class="nav-item nav-link">Course Project</a>
+                        <a href="about_us.html" class="nav-item nav-link">About Us</a>
+                       
+                    
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Page Header Start -->
+    <div class="container-fluid bg-secondary py-5">
+        <div class="container py-5">
+            <div class="row align-items-center py-4">
+                <div class="col-md-6 text-center text-md-left">
+                    <h1 class="mb-4 mb-md-0 text-primary text-uppercase">Course Reflection</h1>
+                </div>
+                <div class="col-md-6 text-center text-md-right">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="btn btn-outline-primary" href="">Home</a>
+                        <i class="fas fa-angle-double-right text-primary mx-2"></i>
+                        <a class="btn btn-outline-primary disabled" href="">Course Reflection</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header Start -->
+     <!-- Features Start -->
+<div class="container-fluid" style="background-color: #F5F5DC;"> <!-- Light Beige Background -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 mt-5 py-5 pr-lg-5">
+                <h6 class="text-primary font-weight-normal text-uppercase mb-3">course learnings</h6>
+                <h1 class="mb-4 section-title">LEARNINGS FROM THE COURSE</h1>
+                <h5 class="mb-4">-> Hierarchical data structures like trees organize information in parent-child relationships. BST enables fast searches, but balancing is crucial, addressed by AVL or Red-Black trees. Heaps manage priority tasks efficiently, while Tries excel in prefix searches like auto-complete. Each tree optimizes specific operations, making them vital for various applications.</h5>
+                <h5 class="mb-4">-> Array query algorithms solve problems like range sums or maximum values efficiently. Segment Trees and Fenwick Trees allow logarithmic time operations, handling even large datasets. These algorithms are crucial in data analytics, competitive programming, and real-time systems requiring quick computations.</h5>
+                <h5 class="mb-4">-> Trees are hierarchical and cycle-free, used in structured data like file systems. Graphs are flexible with complex connections, ideal for networks and paths. Tree traversals (Inorder, Preorder) suit hierarchy processing, while graph traversals (BFS, DFS) explore connectivity and shortest paths.</h5>
+                <h5 class="mb-4">-> Spanning tree algorithms like Kruskal’s minimize costs in network design. Shortest path algorithms like Dijkstra’s are essential for navigation apps and logistics. These algorithms optimize connectivity and route planning in real-world networks, enhancing efficiency.</h5>
+                <ul class="list-inline">
+                    <!-- Add any additional list items if necessary -->
+                </ul>
+            </div>
+            
+            <!-- Image Collage Section with White Background -->
+            <div class="col-lg-5 mt-5">
+                <div class="row" style="background-color: #FFFFFF; padding: 20px; border-radius: 10px;"> <!-- White Background -->
+                    <!-- First Image -->
+                    <div class="col-md-4 mb-4">
+                        <img class="img-fluid" src="binary.jpg" alt="Image 1" style="height:200px; width:350px">
+                    </div>
+                    <!-- Second Image -->
+                    <div class="col-md-4 mb-4">
+                        <img class="img-fluid" src="avl.jpg" alt="Image 2" style="height:200px; width:350px">
+                    </div>
+                    <!-- Third Image -->
+                    <div class="col-md-4 mb-4">
+                        <img class="img-fluid" src="red.jpg" alt="Image 3" style="height:200px; width:350px">
+                    </div>
+                    <!-- Fourth Image -->
+                    <div class="col-md-4 mb-4">
+                        <img class="img-fluid" src="trie.jpg" alt="Image 4" style="height:200px; width:350px">
+                    </div>
+                    <!-- Fifth Image -->
+                    <div class="col-md-4 mb-4">
+                        <img class="img-fluid" src="array.jpg" alt="Image 5" style="height:200px; width:350px">
+                    </div>
+                    <!-- Sixth Image -->
+                    <div class="col-md-4 mb-4">
+                        <img class="img-fluid" src="heapalgo.jpg" alt="Image 6" style="height:200px; width:350px">
+                    </div>
+                    <!-- Seventh Image -->
+                    <div class="col-md-4 mb-4">
+                        <img class="img-fluid" src="sorting.jpg" alt="Image 7" style="height:200px; width:350px">
+                    </div>
+                    <!-- Eighth Image -->
+                    <div class="col-md-4 mb-4">
+                        <img class="img-fluid" src="selection.jpg" alt="Image 8" style="height:200px; width:350px">
+                    </div>
+                    <!-- Ninth Image -->
+                    <div class="col-md-4 mb-4">
+                        <img class="img-fluid" src="insert.jpg" alt="Image 9" style="height:200px; width:350px">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Features End -->
+
+
+
+
+    <!-- Section Start -->
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-6 pr-lg-5">
+                <h6 class="text-primary font-weight-normal text-uppercase mb-3">Nature's Computational Patterns</h6>
+                <h1 class="mb-4 section-title">Understanding Iteration, Recursion, and Backtracking</h1>
+                <p class="text-muted">
+                    <strong>Iteration:</strong> A process where a set of instructions is repeated in a loop until a specific condition is met. It is widely used in computations like traversing arrays or solving mathematical problems.  
+                </p>
+                <p class="text-muted">
+                    <strong>Recursion:</strong> A method of solving problems where a function calls itself as a subroutine. It simplifies solving complex problems by breaking them into smaller, identical tasks.  
+                </p>
+                <p class="text-muted">
+                    <strong>Backtracking:</strong> A problem-solving technique that involves exploring all possible paths to find solutions, retracting steps when a path leads to a dead end. It is often used in puzzles, pathfinding, and constraint satisfaction problems.
+                </p>
+            </div>
+            <div class="col-lg-6 p-0 pt-5 pt-lg-0">
+                <div class="owl-carousel service-carousel position-relative">
+                    <!-- Iteration Section -->
+                    <div class="d-flex flex-column text-center bg-light mx-3 p-4">
+                        <img src="iteration.png" alt="Iteration" class="img-fluid mb-3 rounded-circle" style="width: 150px;height: 150px;">
+                        <h5 class="mb-3">Iteration</h5>
+                        <p class="m-0">Repeated patterns, like the spirals in seashells, exemplify the power of iterative processes.</p>
+                        <div class="animation" style="animation: bounce 2s infinite;">
+                            <h3 class="flaticon-loop display-3 font-weight-normal text-primary"></h3>
+                        </div>
+                    </div>
+                    <!-- Recursion Section -->
+                    <div class="d-flex flex-column text-center bg-light mx-3 p-4">
+                        <img src="R.jpeg" alt="Recursion" class="img-fluid mb-3 rounded-circle" style="width: 150px;height: 150px;">
+                        <h5 class="mb-3">Recursion</h5>
+                        <p class="m-0">Fractal patterns in snowflakes demonstrate recursive structures in nature.</p>
+                        <div class="animation" style="animation: pulse 2s infinite;">
+                            <h3 class="flaticon-tree display-3 font-weight-normal text-primary"></h3>
+                        </div>
+                    </div>
+                    <!-- Backtracking Section -->
+                    <div class="d-flex flex-column text-center bg-light mx-3 p-4">
+                        <img src="backtracking.png" alt="Backtracking" class="img-fluid mb-3 rounded-circle" style="width: 150px;height: 150px;">
+                        <h5 class="mb-3">Backtracking</h5>
+                        <p class="m-0">Ants searching for food mimic backtracking by exploring and retracting paths.</p>
+                        <div class="animation" style="animation: fadeIn 3s infinite;">
+                            <h3 class="flaticon-path display-3 font-weight-normal text-primary"></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Section End -->
+
+<!-- Applications of DAA Start -->
+<div class="container-fluid" style="background-color: #F5F5DC;"> <!-- Light Beige Overall Background -->
+    <div class="container">
+        <div class="row">
+            <!-- Image Section -->
+            <div class="col-md-4 col-sm-6">
+                <div class="py-5 px-4 h-100" style="background-color: #f5c782; border-radius: 10px;"> <!-- Updated Yellow Background -->
+                    <img class="img-fluid mx-auto d-block" src="principles.jpg" alt="Principles" style="height: 100%; width: 100%; object-fit: cover; border-radius: 10px;">
+                </div>
+            </div>
+            <!-- Principles Text Section -->
+            <div class="col-md-8 col-sm-6 p-4">
+                <div class="d-flex flex-column text-black p-4" style="background-color: #FFFFFF; border-radius: 10px; height: 100%;"> <!-- White Background for Text Section -->
+                    <h2 class="text-uppercase mb-4" style="color: #333;">Principles of Design and Analysis of Algorithms</h2>
+                    <ul class="h5" style="color: #333;">
+                        <li><strong>Decomposition:</strong> Breaking a complex problem into smaller, manageable sub-problems to simplify analysis and solution development.</li>
+                        <li><strong>Pattern Recognition:</strong> Identifying recurring structures or behaviors in data or algorithms to leverage reusable solutions.</li>
+                        <li><strong>Abstraction:</strong> Focusing on essential details and ignoring unnecessary complexities to simplify the problem-solving process.</li>
+                        <li><strong>Lazy Propagation/Evaluation:</strong> Delaying computation until absolutely necessary, commonly used in segment trees and other optimization algorithms.</li>
+                        <li><strong>Sliding Window:</strong> A technique for efficiently solving problems that involve subarrays or substrings, optimizing space and time complexity.</li>
+                        <li><strong>Pruning:</strong> Eliminating unnecessary computations or paths in a search space to optimize performance, as in branch-and-bound algorithms.</li>
+                        <li><strong>Memoization and Pre-computing:</strong>
+                            <ul>
+                                <li><strong>Memoization:</strong> Storing intermediate results during runtime to avoid redundant computations.</li>
+                                <li><strong>Pre-computing:</strong> Calculating and storing results beforehand for static data to improve runtime efficiency.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Applications of DAA End -->
+
+
+<!-- Features Start -->
+<div class="container-fluid bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Space Efficiency Section -->
+            <div class="col-lg-4 mt-5 py-5 pr-lg-5">
+                <h6 class="text-primary font-weight-normal text-uppercase mb-3">Efficiency Matters</h6>
+                <h1 class="mb-4 section-title">Space Efficiency</h1>
+                <h5 class="mb-3">Space efficiency refers to the ability of an algorithm or program to use a minimal amount of memory (space) while still achieving the desired results. It measures how effectively a program utilizes memory resources to perform its task, aiming to reduce unnecessary memory consumption. A space-efficient algorithm minimizes the amount of memory required, which is particularly important in environments with limited memory (such as embedded systems) or when processing large datasets.</h5>
+                <ul class="list-inline">
+                    <li><h5><i class=" text-primary mr-3"></i>-> Hash Tables</h5></li>
+                    <li><h5><i class=" text-primary mr-3"></i>-> Lookup Tables</h5></li>
+                    <li><h5><i class=" text-primary mr-3"></i>-> Database Indexing</h5></li>
+                </ul>
+            </div>
+            
+            <!-- Center Text Section -->
+            <div class="col-lg-4 text-center">
+                <div class="d-flex flex-column align-items-center justify-content-center h-100 overflow-hidden">
+                    <h1 class="text-primary" style="font-size: 4rem;">Space</h1>
+                    <h1 class="text-primary" style="font-size: 4rem;">And</h1>
+                    <h1 class="text-primary" style="font-size: 4rem;">Time</h1>
+                    <h1 class="text-primary" style="font-size: 4rem;">Trade-off</h1>
+                    <h5 class="mb-3">The time-space trade-off is a concept in computer science that’s about balancing two things: how much memory an algorithm needs and how long it takes to run.</h5>
+                </div>
+            </div>
+            
+            <!-- Time Efficiency Section -->
+            <div class="col-lg-4 mt-5 py-5 pr-lg-5">
+                <h6 class="text-primary font-weight-normal text-uppercase mb-3">Efficiency Matters</h6>
+                <h1 class="mb-4 section-title">Time Efficiency</h1>
+                <h5 class="mb-3">Time efficiency refers to the ability of an algorithm or program to complete its task in the least amount of time possible, relative to the size of the input. It measures how quickly an algorithm executes, aiming to minimize the time required to produce the desired result. Time efficiency is important for improving the performance of applications, especially when dealing with large datasets or time-sensitive tasks.</h5>
+                <ul class="list-inline">
+                    <li><h5><i class=" text-primary mr-3"></i>-> Memoization in Dynamic Programming</h5></li>
+                    <li><h5><i class=" text-primary mr-3"></i>-> Sorting with Extra Memory </h5></li>
+                    <li><h5><i class=" text-primary mr-3"></i>-> Breadth-First Search (BFS) in Graphs</h5></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Features End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
