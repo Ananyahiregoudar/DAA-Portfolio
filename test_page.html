@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adaptive Traffic Control System</title>
+    <style>
+        .code-editor {
+            position: relative;
+            background-color: #2d2d2d;
+            padding: 20px;
+            border-radius: 10px;
+            color: #f8f8f2;
+            font-size: 16px;
+            overflow: auto;
+            margin-top: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            height: 500px;
+            border: 2px solid #333;
+        }
+
+        /* Code Block Styling */
+        pre {
+            margin: 0;
+            font-family: "Courier New", Courier, monospace;
+        }
+
+        /* Interactive Buttons for Code */
+        .run-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 16px;
+            font-size: 14px;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s;
+        }
+
+        .run-btn:hover {
+            background-color: #45a049;
+        }
+
+        .run-btn:active {
+            background-color: #3e8e41;
+        }
+
+        .output {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #333;
+            color: #f8f8f2;
+            border-radius: 10px;
+            font-family: monospace;
+            white-space: pre-wrap; /* Preserve whitespace and line breaks */
+        }
+
+        .test-section {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .test-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .test-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .test-btn:active {
+            background-color: #004085;
+        }
+    </style>
+</head>
+<body>
+    <div class="code-editor">
+        <button class="run-btn">Run Code</button>
+        <pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;climits&gt;
+
+#define INF INT_MAX
+
+using namespace std;
+
+// Function to implement Floyd-Warshall algorithm to calculate shortest paths between all pairs of nodes
+void floydWarshall(vector&lt;vector&lt;int&gt;&gt;&amp; graph, int n) {
+    vector&lt;vector&lt;int&gt;&gt; dist = graph;
+
+    for (int k = 0; k &lt; n; ++k) {
+        for (int i = 0; i &lt; n; ++i) {
+            for (int j = 0; j &lt; n; ++j) {
+                if (dist[i][k] != INF &amp;&amp; dist[k][j] != INF &amp;&amp; dist[i][k] + dist[k][j] &lt; dist[i][j]) {
+                    dist[i][j] = dist[i][k] + dist[k][j];
+                }
+            }
+        }
+    }
+
+    cout &lt;&lt; "Shortest path matrix using Floyd-Warshall algorithm:" &lt;&lt; endl;
+    for (int i = 0; i &lt; n; ++i) {
+        for (int j = 0; j &lt; n; ++j) {
+            if (dist[i][j] == INF)
+                cout &lt;&lt; "INF ";
+            else
+                cout &lt;&lt; dist[i][j] &lt;&lt; " ";
+        }
+        cout &lt;&lt; endl;
+    }
+}
+
+// Function to adjust traffic light timings based on vehicle waiting counts
+void adjustTrafficLights(vector&lt;int&gt;&amp; vehicleCounts, int n) {
+    vector&lt;int&gt; timings(n);
+
+    // Adjust timings based on vehicle count (proportional adjustment)
+    int totalVehicles = 0;
+    for (int count : vehicleCounts) {
+        totalVehicles += count;
+    }
+
+    for (int i = 0; i &lt; n; ++i) {
+        timings[i] = (vehicleCounts[i] * 60) / totalVehicles; // Proportionally distribute 60 seconds
+    }
+
+    cout &lt;&lt; "Adjusted traffic light timings (in seconds):" &lt;&lt; endl;
+    for (int i = 0; i &lt; n; ++i) {
+        cout &lt;&lt; "Traffic light " &lt;&lt; i + 1 &lt;&lt; ": " &lt;&lt; timings[i] &lt;&lt; " seconds" &lt;&lt; endl;
+    }
+}
+
+int main() {
+    int n;
+    cout &lt;&lt; "Enter the number of intersections: ";
+    cin &gt;&gt; n;
+
+    vector&lt;vector&lt;int&gt;&gt; graph(n, vector&lt;int&gt;(n, INF));
+
+    cout &lt;&lt; "Enter the adjacency matrix for the road network (use " &lt;&lt; INF &lt;&lt; " for no direct path):" &lt;&lt; endl;
+    for (int i = 0; i &lt; n; ++i) {
+        for (int j = 0; j &lt; n; ++j) {
+            cin &gt;&gt; graph[i][j];
+            if (i == j) graph[i][j] = 0; // Distance to self is 0
+        }
+    }
+
+    floydWarshall(graph, n);
+
+    vector&lt;int&gt; vehicleCounts(n);
+    cout &lt;&lt; "Enter the number of vehicles waiting at each intersection:" &lt;&lt; endl;
+    for (int i = 0; i &lt; n; ++i) {
+        cin &gt;&gt; vehicleCounts[i];
+    }
+
+    adjustTrafficLights(vehicleCounts, n);
+
+    return 0;
+}
+        </pre>
+    </div>
+    <div class="output">
+        <!-- Placeholder for the program output -->
+    </div>
+
+    <script>
+        // Simulated output
+        const simulatedOutput = `
+Enter the number of intersections: 3
+Enter the adjacency matrix for the road network (use 2147483647 for no direct path):
+0 2147483647 5
+4 8 2147483647
+2147483647 2 3
+Shortest path matrix using Floyd-Warshall algorithm:
+0 7 5
+4 0 9
+6 2 0
+Enter the number of vehicles waiting at each intersection:
+10 40 20
+Adjusted traffic light timings (in seconds):
+Traffic light 1: 8 seconds
+Traffic light 2: 34 seconds
+Traffic light 3: 17 seconds
+
+Process returned 0 (0x0)   execution time : 71.042 s
+Press any key to continue.`;
+
+        document.querySelector('.run-btn').addEventListener('click', () => {
+            const outputDiv = document.querySelector('.output');
+            outputDiv.textContent = simulatedOutput;
+        });
+    </script>
+</body>
+</html>
